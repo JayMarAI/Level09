@@ -1,0 +1,348 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  background-image: url("images/bg.jpg"); /* The image used */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.fade {
+  /*opacity: 1;
+  */
+  transition: opacity 5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.warningbox {
+  display: none;
+  max-width: 50%;
+  position: absolute;
+  left: 40px;
+  top: 80px;
+  padding: 20px;
+  max-width: 750px;
+  margin: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-30px, -30px);
+  }
+  20% {
+    transform: translate(10px, -30px);
+  }
+  30% {
+    transform: translate(-30px, 30px);
+  }
+  40% {
+    transform: translate(30px, 30px);
+  }
+  50% {
+    transform: translate(-30px, -30px);
+  }
+  60% {
+    transform: translate(30px, -30px);
+  }
+  70% {
+    transform: translate(-30px, 30px);
+  }
+  80% {
+    transform: translate(30px, 30px);
+  }
+  90% {
+    transform: translate(-30px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sides {
+  height: 100%;
+  width: 25%;
+}
+.mid {
+  height: 100%;
+  width: 50%;
+}
+.top {
+  height: 50%;
+  width: 100%;
+}
+.bottom {
+  height: 50%;
+  width: 100%;
+}
+
+.imgbox1 {
+  height: 10%;
+  width: 10%;
+  left: 590px;
+  top: 370px;
+  position: absolute;
+}
+
+.imgbox2 {
+  height: 65%;
+  width: 25%;
+  right: 500px;
+  top: 250px;
+  position: absolute;
+}
+
+.eye1 {
+  height: 10%;
+  width: 5%;
+  right: 1120px;
+  top: 10px;
+  position: absolute;
+}
+
+.eye2 {
+  height: 5%;
+  width: 3%;
+  right: 1010px;
+  top: 335px;
+  position: absolute;
+}
+
+.eye3 {
+  height: 5%;
+  width: 3%;
+  right: 980px;
+  top: 410px;
+  position: absolute;
+}
+
+.bush {
+  width: 100%;
+  height: 65%;
+}
+
+/* control your content */
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.translucent {
+  opacity: 0.3;
+}
+
+.img {
+  max-height: 95%;
+  max-width: 95%;
+}
+
+.img2 {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.img3 {
+  max-height: 75%;
+  max-width: 75%;
+}
+
+.img4 {
+  max-height: 40%;
+  max-width: 45%;
+  top: 200px;
+  left: 300px;
+  position: absolute;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.textbot {
+  background-color: #000;
+  width: 100%;
+  height: 20%;
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  top: 30px;
+  margin-right: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+#cr {
+  position: absolute;
+  pointer-events: none; /* Make sure it doesn't interfere with other elements */
+  display: none; /* Initially hidden */
+  width: 500px; /* Adjust size as needed */
+  height: 500px;
+}
+
+.slideIn {
+  animation: slideIn 0.5s;
+}
+
+.slideOut {
+  animation: slideOut 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-400px);
+  }
+}
+
+.modal-content {
+  width: 50%;
+  height: 100%;
+}
+
+.codebox {
+  width: 13%;
+  height: 50%;
+  background-color: black;
+  display: block;
+}
+
+.row {
+  width: 10%;
+  height: 50%;
+  background-color: pink;
+  display: block;
+}
+
+.cover {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+}
+
+.button {
+  width: 15%;
+  height: 15%;
+  background: gray;
+  margin: 0;
+  margin-left: 1500px;
+  /*background: linear-gradient(135deg, #2b5876, #4e4376);*/
+}
+
+.close {
+  color: #aaaaaa;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+.clickable:active {
+  transform: scale(0.98);
+}
+.clickablehover {
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(2px 8px 3px);
+}
+
+.p1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.p2 {
+  font-size: 200px;
+  color: #ff0000; /* Blood red color */
+  text-shadow: 2px 2px 2px #000000, 0 0 5px #ff0000, 0 0 10px #8b0000,
+    0 0 15px #ff0000, 0 0 20px #8b0000;
+}
+
+.texthover {
+  font-size: 70px;
+}
+
+/* colors */
+.black {
+  background-color: #000000;
+}
+.pink {
+  background-color: #eb5674;
+}
+.yellow {
+  background-color: #fbee40;
+}
+.orange {
+  background-color: #fd5632;
+}
+.grey {
+  background-color: #d3d3d3;
+}
+.dark-grey {
+  background-color: #a9a9a9;
+}

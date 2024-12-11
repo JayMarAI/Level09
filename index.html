@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="images/eye.png" rel="icon" type="image/png" />
+    <title>Level09</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    `
+    <div class="cover" style="display: flex" id="vidc">
+      <video id="intro">
+        <source src="vid/intro.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!-- COVERS -->
+    <div class="cover" id="cover1">
+      <p class="p1 center-content" style="font-size: 100px">
+        Fullscreen(F11) to begin...
+      </p>
+    </div>
+    <div class="cover" id="cover">
+      <p class="p1 center-content" style="font-size: 100px">
+        Fullscreen(F11) to continue...
+      </p>
+    </div>
+    <div class="cover" id="wincover">
+      <p class="p1 center-content">(will send user to next level)</p>
+    </div>
+    <div class="cover" id="losecover">
+      <img src="images/eye.png" id="jumpscare" class="img hide shake" />
+    </div>
+    <div class="cover" id="gameover">
+      <p class="p2 fade center-content" id="gameovert">GAME OVER</p>
+    </div>
+
+    <!-- FIRST SLOT -->
+    <div class="sides">
+      <div class="warningbox" id="warningbox">
+        <p class="p1 fade" id="warning">That music... Is someone there?</p>
+      </div>
+      <div class="imgbox1 center-content">
+        <img
+          src="images/hint1.png"
+          id="paper"
+          onclick="hintShow()"
+          onmouseover="hover(this)"
+          onmouseout="hoverNeg(this)"
+          class="clickable img2 translucent"
+        />
+      </div>
+    </div>
+    <div class="mid">
+      <div class="top">
+        <div class="eye1">
+          <img src="images/eye.png" id="eye" class="img translucent" />
+        </div>
+        <div class="eye2">
+          <img src="images/eye.png" id="eye2" class="img translucent" />
+        </div>
+        <div class="eye3">
+          <img src="images/eye.png" id="eye3" class="img translucent" />
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="imgbox2 center-content">
+          <img
+            src="images/door1.jpg"
+            id="door"
+            onclick="lockOpen()"
+            onmouseover="hover(this)"
+            onmouseout="hoverNeg(this)"
+            class="clickable img2 translucent"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="modal2" id="input">
+      <!-- this is the "X" button to close the modal -->
+      <span class="close" style="font-size: 100px" onclick="lockClose()"
+        >&times;</span
+      >
+      <div class="button center-content">
+        <p
+          id="1"
+          class="p1 center-content clickable"
+          onclick="num1()"
+          onmouseover="numHover(this)"
+          onmouseout="numHoverNeg(this)"
+        >
+          1
+        </p>
+      </div>
+      <div class="button center-content">
+        <p
+          id="2"
+          class="p1 center-content clickable"
+          onclick="num2()"
+          onmouseover="numHover(this)"
+          onmouseout="numHoverNeg(this)"
+        >
+          1
+        </p>
+      </div>
+      <div class="button center-content">
+        <p
+          id="3"
+          class="p1 center-content clickable"
+          onclick="num3()"
+          onmouseover="numHover(this)"
+          onmouseout="numHoverNeg(this)"
+        >
+          1
+        </p>
+      </div>
+      <div class="button center-content">
+        <p
+          id="4"
+          class="p1 center-content clickable"
+          onclick="num4()"
+          onmouseover="numHover(this)"
+          onmouseout="numHoverNeg(this)"
+        >
+          1
+        </p>
+      </div>
+      <div class="button center-content">
+        <p
+          id="5"
+          class="p1 center-content clickable"
+          onclick="num5()"
+          onmouseover="numHover(this)"
+          onmouseout="numHoverNeg(this)"
+        >
+          1
+        </p>
+      </div>
+      <div class="button center-content">
+        <p
+          id="6"
+          class="p1 center-content clickable"
+          onclick="num6()"
+          onmouseover="numHover(this)"
+          onmouseout="numHoverNeg(this)"
+        >
+          1
+        </p>
+      </div>
+    </div>
+
+    <div class="modal center-content" id="hinty" onclick="hintHide()">
+      <img src="images/hint1.png" class="img4" />
+    </div>
+    <audio src="sounds/gameover.mp3" type="audio/mp3" id="dead"></audio>
+    <audio src="sounds/jump.wav" type="audio/wav" id="jump"></audio>
+    <audio src="sounds/bg.mp3" type="audio/mp3" id="bg"></audio>
+    <audio src="sounds/close.ogg" type="audio/ogg" id="close"></audio>
+    <audio src="sounds/scare.ogg" type="audio/ogg" id="scare"></audio>
+    <audio src="sounds/select.ogg" type="audio/ogg" id="select"></audio>
+    <audio src="sounds/codeselect.ogg" type="audio/ogg" id="cselect"></audio>
+    <script src="script.js"></script>
+    <script src="preload.js"></script>
+  </body>
+</html>
